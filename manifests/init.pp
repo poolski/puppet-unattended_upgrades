@@ -1,9 +1,11 @@
 class unattended_upgrades(
   $period                       = 1,                                             # Update period (in days)
+  $origins                      = {},                                            # WIP - add your "origin" settings here.
   $repos                        = {},                                            # Repos to upgrade
   $blacklist                    = [],                                            # Packages to not update
   $email                        = '',                                            # Email for update status
   $autofix                      = true,                                          # Ensure updates keep getting installed
+  $upgrade_all                  = false,                                         # Set this flag to true if you want UA to manage everything except your exclusions
   $minimal_steps                = true,                                          # Allows for shutdown during an upgrade
   $on_shutdown                  = false,                                         # Install only on shutdown
   $on_error                     = false,                                         # Email only on errors, else always
