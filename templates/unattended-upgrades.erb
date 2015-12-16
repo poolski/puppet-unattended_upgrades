@@ -1,6 +1,6 @@
 // Automatically upgrade packages from these origin patterns
 Unattended-Upgrade::Origins-Pattern {
-<% if (defined? scope['unattended_upgrades::upgrade_all']) -%>
+<% if (defined? upgrade_all) -%>
 	"origin=*";
 <% end -%>
 <% if (defined? scope['unattended_upgrades::repos']) -%>
