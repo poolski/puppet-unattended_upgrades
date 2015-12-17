@@ -1,5 +1,6 @@
 class unattended_upgrades(
   $period                       = 1,                                             # Update period (in days)
+  $service_status               = 'stopped',                                     # Does not actually need to be up as a service as far as I can tell
   $origins                      = {},                                            # WIP - add your "origin" settings here.
   $repos                        = {},                                            # Repos to upgrade
   $blacklist                    = [],                                            # Packages to not update
